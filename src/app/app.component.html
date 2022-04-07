@@ -1,0 +1,70 @@
+<!--<hr/>
+<div class="container">
+  <div class="panel panel-primary">
+<h3  style="text-align: center;">PRODUCT DETAILS</h3>
+
+  <form [formGroup]="myform" (ngSubmit)="store()">
+    <div class="text-center">
+    <div class="form-group" >
+      <label for="pname">Product Name</label>
+      <input type="text" class="form-control" id="pname"  formControlName="pname">
+      <small style="color:red" *ngIf="pname && pname.invalid && pname.touched">*Name is Required</small>
+      </div> 
+    </div>
+    <div class="text-center">
+    <div class="form-group">
+      <label for="pbrand">Product Brand</label>
+      <input type="text" class="form-control" id="pbrand" formControlName="pbrand">
+      <small style="color:red" *ngIf="pbrand && pbrand.invalid && pbrand.touched">*Brand is Required</small>
+      </div>
+    </div>
+    <div class="text-center">
+    <div class="form-group">
+      <label for="pprice">Product Price</label>
+      <input type="text" class="form-control" id="pprice" formControlName="pprice">
+      <small style="color:red" *ngIf="pprice && pprice.invalid && pprice.touched">*Price is Required</small>
+    </div>
+     </div>
+    
+     <div class="text-center">
+    <button class="btn btn-primary" [disabled]="myform.invalid">Store</button>
+  </div>
+  </form>
+ </div>
+ </div>
+
+ <div style = "margin-top: 10px;">
+  <div class="productdetails">
+    <table class="table">
+      <thead class="thread-light">
+        <tr>
+          <th>PRODUCT NAME</th>
+          <th>PRODUCT BRAND</th>
+          <th>PRODUCT PRICE</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let pro of products">
+          <td>{{pro.name}}</td>
+          <td>{{pro.brand}}</td>
+          <td>{{pro.price}}</td>
+    </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<hr/>-->
+
+<div class="card" style="margin-left: 500px; margin-top: 50px;">
+  <img src="../assets/images/71F4jU7MRUS._SL1500_.jpg" class="card-img-top" alt="image loading...." width="500px" height="500px" style="padding: 15px;">
+  <div class="card-body">
+    <h4>Category:{{ProductTitle}}</h4>
+    <h4>Price:{{ProductPrice}}</h4>
+    <h4>Stock:{{Stock}}</h4>
+  </div>
+    <button type="button" class="btn btn-success"  style=" width:150px; margin-left: 180px; margin-bottom: 20px;">ADD TO CART</button>
+ 
+</div>
+
+
+
